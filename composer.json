@@ -1,0 +1,20 @@
+{
+    "name": "cedcommerce/fnac-sdk",
+    "version": "1.0.0",
+    "description": "Simple PHP wrapper for FNAC API",
+    "require": {
+        "laminas/laminas-http" : ">=2.3.2",
+        "laminas/laminas-uri" : ">=2.3.2",
+        "laminas/laminas-validator" : ">=2.10.1",
+        "monolog/monolog" : ">=1.17",
+        "symfony/finder" : ">=3.0",
+        "symfony/http-foundation": ">=3.4-dev",
+        "symfony/serializer": ">=2.8",
+        "symfony/class-loader": ">=2.0.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "FnacSdk\\": "src/"
+        }
+    }
+}
