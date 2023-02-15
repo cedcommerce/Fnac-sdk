@@ -8,34 +8,34 @@ namespace FnacSdk\Core;
 /**
  * Class Parser to parse
  */
-class Parser{
+class Parser // Parser class
+{
     /**
      * @var \DOMDocument|null
      */
-    protected $_dom = null;
+    public $dom = null;
 
     /**
      * @var \DOMDocument
      */
-    protected $_currentDom;
+    public $currentDom;
 
     /**
      * @var array
      */
-    protected $_content = [];
+    public $content = [];
 
     /**
      * @var boolean
      */
-    protected $errorHandlerIsActive = false;
+    public $errorHandlerIsActive = 0;
 
     /**
-     *
+     * Public function Construct
      */
-    public function __construct()
-    {
-        $this->_dom = new \DOMDocument();
-        $this->_currentDom = $this->_dom;
+    public function __construct() {
+        $this->dom = new \DOMDocument();
+        $this->currentDom = $this->dom;
         return $this;
     }
 
@@ -54,15 +54,7 @@ class Parser{
      */
     public function getDom()
     {
-        return $this->_dom;
-    }
-
-    /**
-     * @return \DOMDocument
-     */
-    protected function _getCurrentDom()
-    {
-        return $this->_currentDom;
+        return $this->dom;
     }
 
     /**
@@ -71,26 +63,38 @@ class Parser{
      */
     protected function _setCurrentDom($node)
     {
-        $this->_currentDom = $node;
+        $this->currentDom = $node;
         return $this;
     }
 
     /**
+     * @return \DOMDocument
+     */
+    protected function _getCurrentDom()
+    {
+        return $this->currentDom;
+    }
+
+    /**
+     * Public function XmlToArray
+     *
      * @return array
      */
     public function xmlToArray()
     {
-        $this->_content = $this->_xmlToArray();
-        return $this->_content;
+        $this->content = $this->_xmlToArray();
+        return $this->content;
     }
 
     /**
+     * Function _xmlToArray
+     *
      * @param bool $currentNode
      * @return array
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
-    protected function _xmlToArray($currentNode = false)
+    protected function _xmlToArray($currentNode = 0)
     {
         if (!$currentNode) {
             $currentNode = $this->getDom();

@@ -1,6 +1,6 @@
 {
     "name": "ced/fnac-sdk",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Simple PHP wrapper for FNAC API",
     "require": {
         "laminas/laminas-http" : ">=2.3.2",
