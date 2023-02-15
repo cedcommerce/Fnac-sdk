@@ -5,8 +5,10 @@
  */
 namespace FnacSdk\Core;
 
-class Parser
-{
+/**
+ * Class Parser to parse
+ */
+class Parser{
     /**
      * @var \DOMDocument|null
      */
