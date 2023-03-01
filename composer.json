@@ -3,6 +3,7 @@
     "version": "1.0.5",
     "description": "Simple PHP wrapper for FNAC API",
     "require": {
+        "php": ">=7.4",
         "laminas/laminas-http" : ">=2.3.2",
         "laminas/laminas-uri" : ">=2.3.2",
         "laminas/laminas-validator" : ">=2.10.1",
@@ -13,6 +14,7 @@
         "symfony/class-loader": ">=2.0.4"
     },
     "autoload": {
+        "files": [""],
         "psr-4": {
             "FnacSdk\\": "src/"
         }
