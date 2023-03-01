@@ -2,6 +2,7 @@
     "name": "ced/fnac-sdk",
     "version": "1.0.5",
     "description": "Simple PHP wrapper for FNAC API",
+    "type": "magento-2-fnac-sdk",
     "require": {
         "laminas/laminas-http" : ">=2.3.2",
         "laminas/laminas-uri" : ">=2.3.2",
