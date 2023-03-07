@@ -15,7 +15,6 @@
         "symfony/class-loader": ">=2.0.4"
     },
     "autoload": {
-        "files": [""],
         "psr-4": {
             "FnacSdk\\": "src/"
         }
